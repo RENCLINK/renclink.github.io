@@ -13,18 +13,19 @@
   <h1>第一话</h1>
 
   <!-- 漫画图片 -->
-  <img src="../images/ch1_01.jpg">
-  <img src="../images/ch1_02.jpg">
-  <img src="../images/ch1_03.jpg">
+  <img src="../images/ch1_01.png">
+  <!-- 如果有第二页，继续添加 -->
+  <!-- <img src="../images/ch1_02.png"> -->
+  <!-- <img src="../images/ch1_03.png"> -->
 
-  <!-- 导航按钮 -->
+  <!-- 自动导航按钮 -->
   <div class="nav">
     <a href="../index.html">← 返回首页</a>
   </div>
 
   <script>
     const current = 1; // 当前章节号
-    const total = 2; // 总章节数
+    const total = 2;   // 总章节数（如果只有第一话，这里写1；以后上传第二话改2）
     const navDiv = document.querySelector('.nav');
 
     if (current > 1) {
