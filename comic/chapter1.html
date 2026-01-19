@@ -10,14 +10,15 @@
     nav.top-nav a { font-size:24px; }
     nav.sub-nav a { font-size:18px; }
     .comic-img { width:100%; max-width:900px; margin:20px auto; display:block; }
-    .nav-bottom { display:flex; justify-content:center; align-items:center; margin:20px 0; gap:20px; }
-    .nav-bottom a, select { font-size:18px; color:#f5c542; background:#111; border:none; padding:5px 10px; }
+    .nav-bar { display:flex; justify-content:center; align-items:center; margin:20px 0; gap:20px; }
+    .nav-bar a, select, .nav-bar span { font-size:18px; color:#f5c542; background:#111; border:none; padding:5px 10px; }
     select { cursor:pointer; }
+    footer { text-align:center; margin:30px 0; font-size:14px; color:#888; }
   </style>
 </head>
 <body>
 
-<!-- 顶部两行导航 -->
+<!-- 顶部导航 -->
 <nav class="top-nav">
   <a href="../index.html">RENCLINKCREAKY</a>
 </nav>
@@ -30,29 +31,28 @@
 
 <h1>Renclink Unintentionally</h1>
 
+<!-- 上方导航条 -->
+<div class="nav-bar">
+  <span>第一话</span>
+  
+  <select id="chapterSelectTop">
+    <option value="chapter1.html" selected>Renclink Unintentionally</option>
+    <option value="chapter2.html">第二话</option>
+    <option value="chapter3.html">第三话</option>
+  </select>
+  
+  <a href="chapter2.html">下一话 →</a>
+</div>
+
 <!-- 漫画图片 -->
 <img class="comic-img" src="../images/ch1_01.png" alt="第一话">
 
 <!-- 下方导航条 -->
-<div class="nav-bottom">
-  <a href="../index.html">← 返回首页</a>
+<div class="nav-bar">
+  <span>第一话</span>
   
-  <select id="chapterSelect">
-    <option value="chapter1.html" selected>第一话</option>
-    <option value="chapter2.html">第二话</option>
-    <option value="chapter3.html">第三话</option>
-    <!-- 后续章节可以在这里添加 -->
-  </select>
-  
-  <a href="chapter2.html">下一话 →</a>
-</div>
-
-<!-- 上方也加导航条 -->
-<div class="nav-bottom">
-  <a href="../index.html">← 返回首页</a>
-  
-  <select id="chapterSelectTop">
-    <option value="chapter1.html" selected>第一话</option>
+  <select id="chapterSelectBottom">
+    <option value="chapter1.html" selected>Renclink Unintentionally</option>
     <option value="chapter2.html">第二话</option>
     <option value="chapter3.html">第三话</option>
   </select>
@@ -60,15 +60,20 @@
   <a href="chapter2.html">下一话 →</a>
 </div>
 
+<!-- 下拉菜单跳转功能 -->
 <script>
-  // 下拉菜单跳转
-  document.getElementById('chapterSelect').onchange = function() {
-    location.href = this.value;
-  };
   document.getElementById('chapterSelectTop').onchange = function() {
     location.href = this.value;
   };
+  document.getElementById('chapterSelectBottom').onchange = function() {
+    location.href = this.value;
+  };
 </script>
+
+<!-- 页尾版权信息 -->
+<footer>
+  © 2026 Renclinkcreaky. All rights reserved.
+</footer>
 
 </body>
 </html>
