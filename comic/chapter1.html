@@ -1,57 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>Renclink Unintentionally</title>
-  <style>
-    body {
-      background:#000;
-      color:#eee;
-      font-family:sans-serif;
-      text-align:center;
-      margin:0;
-      padding:0;
-    }
-    a {
-      color:#f5c542;
-      text-decoration:none;
-      margin:0 10px;
-      font-weight:bold;
-    }
-    nav.top-nav, nav.sub-nav {
-      background:#111;
-      padding:10px 0;
-    }
-    nav.top-nav a { font-size:24px; }
-    nav.sub-nav a { font-size:18px; }
-    .comic-img {
-      width:100%;
-      max-width:900px;
-      margin:20px auto;
-      display:block;
-    }
-    .nav-bar {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      margin:20px 0;
-      gap:20px;
-    }
-    .nav-bar a, select {
-      font-size:18px;
-      color:#f5c542;
-      background:#111;
-      border:none;
-      padding:5px 10px;
-    }
-    select { cursor:pointer; }
-    footer {
-      text-align:center;
-      margin:30px 0;
-      font-size:14px;
-      color:#888;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Renclink Unintentionally</title>
+<style>
+body { background:#000; color:#eee; font-family:sans-serif; text-align:center; margin:0; padding:0; }
+a { color:#f5c542; text-decoration:none; margin:0 10px; font-weight:bold; }
+nav.top-nav, nav.sub-nav { background:#111; padding:10px 0; }
+nav.top-nav a { font-size:24px; }
+nav.sub-nav a { font-size:18px; }
+.comic-img { width:100%; max-width:900px; margin:20px auto; display:block; }
+.nav-bar { display:flex; justify-content:center; align-items:center; margin:20px 0; gap:20px; }
+.nav-bar a, select { font-size:18px; color:#f5c542; background:#111; border:none; padding:5px 10px; }
+select { cursor:pointer; }
+footer { text-align:center; margin:30px 0; font-size:14px; color:#888; }
+</style>
 </head>
 <body>
 
@@ -60,7 +23,7 @@
   <a href="../index.html">RENCLINKCREAKY</a>
 </nav>
 <nav class="sub-nav">
-  <a href="chapter1.html">Comic</a>
+  <a href="../comic/chapter1.html">Comic</a>
   <a href="../archive/index.html">Archive</a>
   <a href="../gallery/index.html">Gallery</a>
   <a href="../characters/index.html">Characters</a>
@@ -91,20 +54,12 @@
   <a href="chapter2.html">下一话 →</a>
 </div>
 
-<!-- 下拉菜单跳转 -->
 <script>
-  document.getElementById('chapterSelectTop').onchange = function () {
-    location.href = this.value;
-  };
-  document.getElementById('chapterSelectBottom').onchange = function () {
-    location.href = this.value;
-  };
+document.getElementById('chapterSelectTop').onchange = function() { location.href = this.value; };
+document.getElementById('chapterSelectBottom').onchange = function() { location.href = this.value; };
 </script>
 
-<!-- 页尾 -->
-<footer>
-  © 2026 Renclinkcreaky. All rights reserved.
-</footer>
+<footer>© 2026 Renclinkcreaky. All rights reserved.</footer>
 
 </body>
 </html>
