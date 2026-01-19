@@ -49,40 +49,40 @@
 
     h1 {
       margin-bottom:10px;
-      font-size:48px;
+    }
+    h2 {
       color:#f5c542;
-      text-shadow:1px 1px 5px #222;
+      margin:40px 0 20px 0;
+      font-size:32px;
+      text-shadow: 1px 1px 3px #222;
     }
     p {
       color:#ccc;
-      font-size:18px;
-      margin-bottom:40px;
     }
 
     /* Gallery 图片网格 */
-    #gallery {
+    .gallery-section {
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap:20px;
-      max-width:1200px;
+      max-width:1000px;
       margin:0 auto 50px auto;
       padding:0 20px;
     }
-    #gallery a {
+    .gallery-section a {
       display:block;
       text-decoration:none;
       color:#eee;
       text-align:center;
     }
-    #gallery img {
+    .gallery-section img {
       width:100%;
-      border:3px solid #f5c542;
-      border-radius:10px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      border:2px solid #f5c542;
+      border-radius:8px;
+      transition: transform 0.3s;
     }
-    #gallery img:hover {
+    .gallery-section img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 15px #f5c542;
     }
 
     footer {
@@ -106,18 +106,30 @@
   <a href="../archive/index.html">Archive</a>
   <a href="index.html">Gallery</a>
   <a href="../characters/index.html">Characters</a>
-  <a href="../about/index.html">About</a> <!-- 新增 About 页面链接 -->
 </div>
 
 <h1>Gallery</h1>
-<p>这里展示我的漫画插画、角色设计和其他创作作品</p>
+<p>这里展示我的漫画插画或作品</p>
 
-<div id="gallery">
+<!-- 插画作品 -->
+<h2>插画作品</h2>
+<div class="gallery-section">
   <a href="../images/ch1_01.png"><img src="../images/ch1_01.png" alt="作品1"></a>
   <a href="../images/ch1_02.png"><img src="../images/ch1_02.png" alt="作品2"></a>
-  <a href="../images/ch1_03.png"><img src="../images/ch1_03.png" alt="作品3"></a>
-  <a href="../images/ch1_04.png"><img src="../images/ch1_04.png" alt="作品4"></a>
-  <!-- 可以继续添加更多图片 -->
+</div>
+
+<!-- 漫画草稿 -->
+<h2>漫画草稿</h2>
+<div class="gallery-section">
+  <a href="../images/draft1.png"><img src="../images/draft1.png" alt="草稿1"></a>
+  <a href="../images/draft2.png"><img src="../images/draft2.png" alt="草稿2"></a>
+</div>
+
+<!-- 人物设定 -->
+<h2>人物设定</h2>
+<div class="gallery-section">
+  <a href="../images/character1.png"><img src="../images/character1.png" alt="人物1"></a>
+  <a href="../images/character2.png"><img src="../images/character2.png" alt="人物2"></a>
 </div>
 
 <footer>
