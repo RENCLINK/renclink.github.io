@@ -1,119 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>RENCLINKCREAKY</title>
-  <style>
-    /* 全局 */
-    body {
-      margin:0;
-      padding:0;
-      background:#000;
-      color:#eee;
-      font-family:'Arial', sans-serif;
-      text-align:center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RENCLINKCREAKY</title>
+<style>
+/* 全局 */
+body {
+  margin:0;
+  padding:0;
+  background:#000;
+  color:#eee;
+  font-family:'Arial', sans-serif;
+  text-align:center;
+}
 
-    /* 首页大标题 */
-    .site-title {
-      font-size:60px;
-      font-weight:bold;
-      padding:50px 0 20px 0;
-      color:#f5c542;
-      text-shadow: 2px 2px 5px #222;
-    }
+/* 首页大标题 */
+.site-title {
+  font-size:60px;
+  font-weight:bold;
+  padding:50px 0 20px 0;
+  color:#f5c542;
+  text-shadow: 2px 2px 5px #222;
+}
+.site-title a {
+  color:#f5c542;
+  text-decoration:none;
+}
+.site-title a:hover {
+  color:#fff;
+  text-shadow:1px 1px 5px #f5c542;
+}
 
-    .site-title a {
-      color:#f5c542;
-      text-decoration:none;
-    }
+/* 主导航 */
+.main-nav {
+  margin-bottom:40px;
+}
+.main-nav a {
+  color:#f5c542;
+  text-decoration:none;
+  font-size:24px;
+  margin:0 25px;
+  display:inline-block;
+  padding:10px 0;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.main-nav a:hover {
+  color:#fff;
+  text-shadow:1px 1px 5px #f5c542;
+}
 
-    .site-title a:hover {
-      color:#fff;
-      text-shadow:1px 1px 5px #f5c542;
-    }
+/* 简介 */
+.intro {
+  max-width:900px;
+  margin:0 auto 50px auto;
+  font-size:18px;
+  line-height:1.6;
+  color:#ccc;
+}
 
-    /* 主导航 */
-    .main-nav a {
-      color:#f5c542;
-      text-decoration:none;
-      font-size:24px;
-      margin:0 25px;
-      display:inline-block;
-      padding:10px 0;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
+/* 最新章节 / 图片网格 */
+.latest {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:30px;
+  max-width:1000px;
+  margin:0 auto 50px auto;
+  padding:0 20px;
+}
+.latest-item {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+}
+.latest-item img {
+  width:100%;
+  max-width:250px;
+  border:2px solid #f5c542;
+  transition: transform 0.3s;
+}
+.latest-item img:hover {
+  transform: scale(1.05);
+}
+.latest-item span {
+  margin-top:10px;
+  font-size:18px;
+  color:#f5c542;
+}
 
-    .main-nav a:hover {
-      color:#fff;
-      text-shadow: 1px 1px 5px #f5c542;
-    }
+/* 新闻滚动区域 */
+.news {
+  max-width:900px;
+  margin:0 auto 50px auto;
+  padding:10px;
+  border:2px solid #f5c542;
+  overflow-y:auto;
+  max-height:250px;
+  text-align:left;
+}
+.news h3 {
+  color:#f5c542;
+  margin:10px 0 5px 0;
+  font-size:20px;
+}
+.news p {
+  color:#ccc;
+  margin:0 0 15px 0;
+  font-size:16px;
+}
+.news img {
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:10px 0;
+  border:2px solid #f5c542;
+}
 
-    /* 简介 / 宣传图 */
-    .intro {
-      margin:50px auto;
-      max-width:900px;
-      font-size:18px;
-      line-height:1.6;
-      color:#ccc;
-    }
+/* 支持按钮 */
+.support-btn {
+  display:inline-block;
+  margin:20px 0;
+  padding:12px 30px;
+  font-size:20px;
+  color:#fff;
+  background:#f5c542;
+  border:none;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  transition: background 0.3s, color 0.3s;
+}
+.support-btn:hover {
+  background:#fff;
+  color:#f5c542;
+}
 
-    /* 图片优化：限制宽度 + 自适应，lazy加载 */
-    .intro img {
-      max-width:100%;
-      height:auto;
-      margin-top:20px;
-      border:2px solid #f5c542;
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    /* 懒加载（lazy）示例 */
-    img[loading="lazy"] {
-      filter: blur(1px);
-      transition: filter 0.3s;
-    }
-    img[loading="lazy"]:not([src=""]) {
-      filter: none;
-    }
-
-    /* 支持按钮 */
-    .support-btn {
-      display:inline-block;
-      margin:30px 0;
-      padding:12px 30px;
-      font-size:20px;
-      color:#fff;
-      background:#f5c542;
-      border:none;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:bold;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .support-btn:hover {
-      background:#fff;
-      color:#f5c542;
-    }
-
-    footer {
-      text-align:center;
-      margin:50px 0;
-      font-size:14px;
-      color:#888;
-    }
-  </style>
+/* 页尾 */
+footer {
+  text-align:center;
+  margin:50px 0;
+  font-size:14px;
+  color:#888;
+}
+</style>
 </head>
 <body>
 
-<!-- 首页大标题，点击跳回首页 -->
+<!-- 首页大标题 -->
 <div class="site-title">
   <a href="index.html">RENCLINKCREAKY</a>
 </div>
 
-<!-- 主导航菜单（Home 已移除） -->
+<!-- 主导航 -->
 <div class="main-nav">
   <a href="comic/chapter1.html">Comic</a>
   <a href="archive/index.html">Archive</a>
@@ -121,15 +160,45 @@
   <a href="characters/index.html">Characters</a>
 </div>
 
-<!-- 网站简介 / 宣传图 -->
+<!-- 简介 -->
 <div class="intro">
   <p>Welcome to my comics website!</p>
   <p>All original comics will be updated as soon as new chapters are ready.</p>
-  <!-- lazy loading 图片，减轻加载压力 -->
-  <img src="images/ch1_01.png" alt="Cover Image" loading="lazy">
-  <p>Support my work: click the button below if you want to help.</p>
-  <a class="support-btn" href="#" target="_blank">Support / Donate</a>
 </div>
+
+<!-- 最新新闻 / 公告 -->
+<div class="news">
+  <h3>Latest News</h3>
+  <p><strong>Chapter 1 Released!</strong> Check out "Renclink Unintentionally" now!</p>
+  <img src="images/ch1_01.png" alt="Chapter 1" loading="lazy">
+  <p><strong>Coming Soon:</strong> Chapter 2 update expected next week.</p>
+  <img src="images/ch2_01.png" alt="Chapter 2" loading="lazy">
+</div>
+
+<!-- 最新章节 / 图片网格 -->
+<div class="latest">
+  <div class="latest-item">
+    <a href="comic/chapter1.html">
+      <img src="images/ch1_01.png" alt="Chapter 1" loading="lazy">
+      <span>Chapter 1: Renclink Unintentionally</span>
+    </a>
+  </div>
+  <div class="latest-item">
+    <a href="comic/chapter2.html">
+      <img src="images/ch2_01.png" alt="Chapter 2" loading="lazy">
+      <span>Chapter 2</span>
+    </a>
+  </div>
+  <div class="latest-item">
+    <a href="comic/chapter3.html">
+      <img src="images/ch3_01.png" alt="Chapter 3" loading="lazy">
+      <span>Chapter 3</span>
+    </a>
+  </div>
+</div>
+
+<!-- 支持按钮 -->
+<a class="support-btn" href="#" target="_blank">Support / Donate</a>
 
 <!-- 页尾 -->
 <footer>
