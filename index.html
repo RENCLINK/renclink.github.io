@@ -19,30 +19,45 @@ body {
 .site-title {
   font-size:48px;
   font-weight:bold;
-  padding:45px 0 25px 0;
+  padding:40px 0 20px 0;
   color:#f5c542;
-  text-shadow:2px 2px 5px #222;
 }
 .site-title a {
   color:#f5c542;
   text-decoration:none;
 }
-.site-title a:hover {
-  color:#fff;
-}
+.site-title a:hover { color:#fff; }
 
 /* ===== 导航 ===== */
 .main-nav {
-  margin-bottom:40px;
+  margin-bottom:30px;
 }
 .main-nav a {
   color:#f5c542;
   text-decoration:none;
-  font-size:24px;
-  margin:0 25px;
+  font-size:22px;
+  margin:0 20px;
 }
-.main-nav a:hover {
-  color:#fff;
+.main-nav a:hover { color:#fff; }
+
+/* ===== 社交图标（统一） ===== */
+.socials {
+  margin:20px 0 30px 0;
+}
+.socials a {
+  display:inline-block;
+  margin:0 12px;
+}
+.socials svg {
+  width:22px;   /* 比之前小 */
+  height:22px;
+  fill:#f5c542;
+  opacity:0.8;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.socials a:hover svg {
+  transform: scale(1.15);
+  opacity:1;
 }
 
 /* ===== 主视觉 ===== */
@@ -57,60 +72,37 @@ body {
   border:2px solid #f5c542;
 }
 
-/* ===== 分区标题 ===== */
-.section-title {
-  font-size:32px;
-  margin:40px 0 30px 0;
+/* ===== Latest Comic ===== */
+.latest-section {
+  margin-bottom:80px;
+}
+.latest-title {
+  font-size:30px;
   color:#f5c542;
+  margin-bottom:30px;
 }
 
-/* ===== Latest Comic ===== */
-.latest {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap:40px;
-  max-width:900px;
-  margin:0 auto 70px auto;
-  padding:0 20px;
+.latest-comic a {
+  text-decoration:none;
+  color:#f5c542;
 }
-.latest-item img {
-  width:100%;
-  max-width:260px;
+.latest-comic img {
+  width:260px;
   border:2px solid #f5c542;
   transition: transform 0.3s;
 }
-.latest-item img:hover {
+.latest-comic img:hover {
   transform: scale(1.05);
 }
-.latest-item span {
+.latest-comic span {
   display:block;
-  margin-top:12px;
+  margin-top:14px;
   font-size:18px;
-  color:#f5c542;
-}
-
-/* ===== 社交 SVG 图标 ===== */
-.socials {
-  margin:40px 0 70px 0;
-}
-.socials a {
-  display:inline-block;
-  margin:0 18px;
-}
-.socials svg {
-  width:32px;
-  height:32px;
-  fill:#f5c542;
-  transition: transform 0.3s, fill 0.3s;
-}
-.socials a:hover svg {
-  transform: scale(1.15);
-  fill:#fff;
 }
 
 /* ===== 页尾 ===== */
 footer {
-  margin:50px 0;
+  margin:40px 0;
   font-size:14px;
   color:#888;
 }
@@ -126,66 +118,79 @@ footer {
 
 <!-- 导航 -->
 <div class="main-nav">
-  <a href="comic/chapter1.html">Comic</a>
+  <a href="comic/index.html">Comic</a>
   <a href="archive/index.html">Archive</a>
   <a href="gallery/index.html">Gallery</a>
   <a href="characters/index.html">Characters</a>
 </div>
 
+<!-- 顶部社交 -->
+<div class="socials">
+  <!-- Email -->
+  <a href="mailto:jwh948754@gmail.com" aria-label="Email">
+    <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm10 9L4 6h16l-8 7z"/></svg>
+  </a>
+
+  <!-- Patreon -->
+  <a href="https://www.patreon.com/renclinkcreaky" target="_blank" aria-label="Patreon">
+    <svg viewBox="0 0 24 24"><path d="M14.8 2a8.8 8.8 0 1 1 0 17.6A8.8 8.8 0 0 1 14.8 2zM2 2h3v20H2z"/></svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/renclink" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10a5 5 0 0 0 0-10z"/></svg>
+  </a>
+
+  <!-- Bluesky -->
+  <a href="https://bsky.app/profile/renclink.bsky.social" target="_blank" aria-label="Bluesky">
+    <svg viewBox="0 0 24 24"><path d="M12 12c2.5-3.5 7-6.5 9-7-1 4-4 8-7 9 3 1 6 5 7 9-2-1-6.5-3.5-9-7-2.5 3.5-7 6.5-9 7 1-4 4-8 7-9-3-1-6-5-7-9 2 1 6.5 3.5 9 7z"/></svg>
+  </a>
+
+  <!-- YouTube -->
+  <a href="https://www.youtube.com/@renclinkcreaky" target="_blank" aria-label="YouTube">
+    <svg viewBox="0 0 24 24"><path d="M23 7s-1-4-4-4H5C2 3 1 7 1 7s-1 4-1 7 1 7 1 7 1 4 4 4h14c3 0 4-4 4-4s1-4 1-7-1-7-1-7zM10 16V8l6 4-6 4z"/></svg>
+  </a>
+</div>
+
 <!-- 主视觉 -->
 <div class="hero">
-  <!-- 换成你的主视觉 -->
   <img src="images/hero.png" alt="Renclinkcreaky Hero Image">
 </div>
 
 <!-- Latest Comic -->
-<h2 class="section-title">Latest Comic</h2>
+<section class="latest-section">
+  <div class="latest-title">Latest Comic</div>
 
-<div class="latest">
-  <div class="latest-item">
-    <a href="comic/chapter1.html">
-      <img src="images/ch1_01.png" alt="Chapter 1" loading="lazy">
-      <span>Chapter 1: Renclink Unintentionally</span>
+  <div class="latest-comic">
+    <a id="latest-link">
+      <img id="latest-thumb" alt="Latest Comic">
+      <span id="latest-text"></span>
     </a>
   </div>
+</section>
 
-  <div class="latest-item">
-    <a href="comic/chapter2.html">
-      <img src="images/ch2_01.png" alt="Chapter 2" loading="lazy">
-      <span>Chapter 2</span>
-    </a>
-  </div>
-</div>
-
-<!-- 社交图标（SVG，无外链） -->
+<!-- 底部社交 -->
 <div class="socials">
-
-  <!-- Twitter / X -->
-  <a href="https://twitter.com/YOURNAME" target="_blank" aria-label="Twitter">
-    <svg viewBox="0 0 24 24">
-      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 7.47v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-    </svg>
-  </a>
-
-  <!-- Instagram -->
-  <a href="https://instagram.com/YOURNAME" target="_blank" aria-label="Instagram">
-    <svg viewBox="0 0 24 24">
-      <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6a3 3 0 0 1 0-6zm4.5-.9a1.1 1.1 0 1 0 0 2.2a1.1 1.1 0 0 0 0-2.2z"/>
-    </svg>
-  </a>
-
-  <!-- Patreon -->
-  <a href="https://patreon.com/YOURNAME" target="_blank" aria-label="Patreon">
-    <svg viewBox="0 0 24 24">
-      <path d="M14.82 2C9.98 2 6 5.98 6 10.82S9.98 19.64 14.82 19.64 23.64 15.66 23.64 10.82 19.66 2 14.82 2zM2 2h3v20H2z"/>
-    </svg>
-  </a>
-
+  <!-- 和顶部一样，直接复用 -->
+  (同上，可直接复制，不影响结构)
 </div>
 
 <footer>
   © 2026 Renclinkcreaky. All rights reserved.
 </footer>
+
+<!-- ===== Latest Comic 自动控制 ===== -->
+<script>
+const latestComic = {
+  title: "Chapter 2",
+  link: "comic/chapter2.html",
+  cover: "images/ch2_01.png"
+};
+
+document.getElementById("latest-link").href = latestComic.link;
+document.getElementById("latest-thumb").src = latestComic.cover;
+document.getElementById("latest-text").textContent = latestComic.title;
+</script>
 
 </body>
 </html>
