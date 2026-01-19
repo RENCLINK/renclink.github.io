@@ -1,31 +1,124 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Characters - RENCLINKCREAKY</title>
-  <style>
-    body { background:#000; color:#eee; font-family:sans-serif; text-align:center; }
-    img { width:200px; height:auto; margin:10px; display:inline-block; }
-    .nav a { color:#f5c542; margin:0 10px; text-decoration:none; }
-  </style>
+<meta charset="UTF-8">
+<title>Characters - RENCLINKCREAKY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* 全局 */
+body {
+  margin:0;
+  padding:0;
+  background:#000;
+  color:#eee;
+  font-family:'Arial', sans-serif;
+  text-align:center;
+}
+
+/* 顶部导航 */
+.navbar {
+  background:#111;
+  padding:10px 0;
+}
+.navbar a {
+  color:#f5c542;
+  text-decoration:none;
+  margin:0 20px;
+  font-size:24px;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color:#fff;
+}
+
+/* 页头 */
+.page-title {
+  font-size:36px;
+  margin:30px 0 20px 0;
+  color:#f5c542;
+}
+
+/* 角色网格 */
+.characters-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap:20px;
+  max-width:1200px;
+  margin:0 auto 50px auto;
+}
+
+/* 每个角色卡片 */
+.character-item {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-item img {
+  width:100%;
+  max-width:200px;
+  border:2px solid #f5c542;
+  transition: transform 0.3s;
+  cursor:pointer;
+}
+.character-item img:hover {
+  transform: scale(1.05);
+}
+
+.character-item span {
+  margin-top:10px;
+  font-size:18px;
+  color:#f5c542;
+  text-align:center;
+}
+
+/* 页尾 */
+footer {
+  text-align:center;
+  margin:50px 0;
+  font-size:14px;
+  color:#888;
+}
+</style>
+
+<!-- 可选：Lightbox 功能 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 </head>
 <body>
 
 <!-- 顶部导航 -->
-<nav style="background:#111; padding:10px; text-align:center;">
+<div class="navbar">
   <a href="../index.html">RENCLINKCREAKY</a>
   <a href="../comic/chapter1.html">Comic</a>
   <a href="../archive/index.html">Archive</a>
   <a href="../gallery/index.html">Gallery</a>
   <a href="index.html">Characters</a>
-</nav>
+</div>
 
-<h1>Characters</h1>
-<p>这里放漫画角色介绍</p>
+<h1 class="page-title">Characters</h1>
 
-<!-- 示例角色图片 -->
-<img src="../images/ch1_01.png" alt="角色1">
-<img src="../images/ch1_02.png" alt="角色2">
+<!-- 角色网格 -->
+<div class="characters-grid">
+  <div class="character-item">
+    <a href="../images/ch1_01.png" data-lightbox="characters" data-title="Character 1">
+      <img src="../images/ch1_01.png" alt="Character 1" loading="lazy">
+      <span>Character 1</span>
+    </a>
+  </div>
+  <div class="character-item">
+    <a href="../images/ch1_02.png" data-lightbox="characters" data-title="Character 2">
+      <img src="../images/ch1_02.png" alt="Character 2" loading="lazy">
+      <span>Character 2</span>
+    </a>
+  </div>
+  <!-- 可继续添加更多角色 -->
+</div>
+
+<footer>
+  © 2026 Renclinkcreaky. All rights reserved.
+</footer>
 
 </body>
 </html>
