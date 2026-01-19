@@ -1,186 +1,41 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RENCLINKCREAKY</title>
-  <link rel="stylesheet" href="/style.css">
-
-<style>
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin:0;
-  padding:0;
-  background:#000;
-  color:#eee;
-  font-family:'Arial', sans-serif;
-  text-align:center;
-  overflow-x:hidden;
-}
-
-/* ===== 大标题（桌面） ===== */
-.site-title {
-  font-size:60px;
-  font-weight:bold;
-  padding:40px 0 20px;
-  color:#f5c542;
-  text-shadow:2px 2px 5px #222;
-  max-width:100%;
-  white-space:nowrap;
-}
-.site-title a {
-  color:#f5c542;
-  text-decoration:none;
-}
-.site-title a:hover {
-  color:#fff;
-  text-shadow:1px 1px 5px #f5c542;
-}
-
-/* ✅ 手机端自动缩小标题 */
-@media (max-width: 600px) {
-  .site-title {
-    font-size:36px;
-    padding:28px 0 16px;
-  }
-}
-
-/* 导航 */
-.main-nav {
-  margin-bottom:30px;
-}
-.main-nav a {
-  color:#f5c542;
-  text-decoration:none;
-  font-size:22px;
-  margin:0 20px;
-}
-.main-nav a:hover {
-  color:#fff;
-}
-
-/* 顶部社交 */
-.socials {
-  margin:20px 0 30px;
-}
-.socials a {
-  display:inline-block;
-  margin:0 12px;
-}
-.socials svg {
-  width:22px;
-  height:22px;
-  fill:#f5c542;
-  opacity:0.8;
-  transition:transform 0.2s, opacity 0.2s;
-}
-.socials a:hover svg {
-  transform:scale(1.15);
-  opacity:1;
-}
-
-/* 主视觉 */
-.hero {
-  padding:0 20px;
-  margin-bottom:70px;
-}
-.hero img {
-  width:100%;
-  max-width:1100px;
-  margin:0 auto;
-  display:block;
-  border:2px solid #f5c542;
-}
-
-/* Latest Comic */
-.latest-section {
-  margin-bottom:80px;
-}
-.latest-title {
-  font-size:30px;
-  color:#f5c542;
-  margin-bottom:30px;
-}
-.latest-comic a {
-  text-decoration:none;
-  color:#f5c542;
-}
-.latest-comic img {
-  width:260px;
-  max-width:90%;
-  border:2px solid #f5c542;
-  transition:transform 0.3s;
-}
-.latest-comic img:hover {
-  transform:scale(1.05);
-}
-.latest-comic span {
-  display:block;
-  margin-top:14px;
-  font-size:18px;
-}
-
-/* 页尾 */
-footer {
-  margin:40px 0;
-  font-size:14px;
-  color:#888;
-}
-
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<div class="site-title">
-  <a href="index.html">RENCLINKCREAKY</a>
-</div>
+<div class="site-title"><a href="index.html">RENCLINKCREAKY</a></div>
 
 <div class="main-nav">
-  <a id="comic-nav" href="#">Comic</a>
+  <a href="comic/chapter1.html">Comic</a>
   <a href="archive/index.html">Archive</a>
   <a href="gallery/index.html">Gallery</a>
   <a href="characters/index.html">Characters</a>
 </div>
 
 <div class="socials">
-  <a href="mailto:jwh948754@gmail.com"><svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm10 9L4 6h16l-8 7z"/></svg></a>
-  <a href="https://www.patreon.com/renclinkcreaky" target="_blank"><svg viewBox="0 0 24 24"><path d="M14.8 2a8.8 8.8 0 1 1 0 17.6A8.8 8.8 0 0 1 14.8 2zM2 2h3v20H2z"/></svg></a>
-  <a href="https://www.instagram.com/renclink" target="_blank"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10a5 5 0 0 0 0-10z"/></svg></a>
-  <a href="https://bsky.app/profile/renclink.bsky.social" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 12c2.5-3.5 7-6.5 9-7-1 4-4 8-7 9 3 1 6 5 7 9-2-1-6.5-3.5-9-7-2.5 3.5-7 6.5-9 7 1-4 4-8 7-9-3-1-6-5-7-9 2 1 6.5 3.5 9 7z"/></svg></a>
-  <a href="https://www.youtube.com/@renclinkcreaky" target="_blank"><svg viewBox="0 0 24 24"><path d="M23 7s-1-4-4-4H5C2 3 1 7 1 7s-1 4-1 7 1 7 1 7 1 4 4 4h14c3 0 4-4 4-4s1-4 1-7-1-7-1-7zM10 16V8l6 4-6 4z"/></svg></a>
+  <!-- 填入社交图标 SVG -->
 </div>
 
-<div class="hero">
+<section class="hero">
   <img src="images/hero.png" alt="Renclinkcreaky Hero Image">
-</div>
+</section>
 
 <section class="latest-section">
   <div class="latest-title">Latest Comic</div>
   <div class="latest-comic">
-    <a id="latest-link">
-      <img id="latest-thumb" alt="Latest Comic">
-      <span id="latest-text"></span>
+    <a id="latest-link" href="comic/chapter2.html">
+      <img id="latest-thumb" src="images/ch2_01.png" alt="Latest Comic">
+      <span id="latest-text">Chapter 2</span>
     </a>
   </div>
 </section>
 
 <footer>© 2026 Renclinkcreaky. All rights reserved.</footer>
-
-<script>
-const latestComic = {
-  title: "Chapter 2",
-  link: "comic/chapter2.html",
-  cover: "images/ch2_01.png"
-};
-document.getElementById("latest-link").href = latestComic.link;
-document.getElementById("latest-thumb").src = latestComic.cover;
-document.getElementById("latest-text").textContent = latestComic.title;
-document.getElementById("comic-nav").href = latestComic.link;
-</script>
 
 </body>
 </html>
