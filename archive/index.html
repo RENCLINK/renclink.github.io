@@ -87,4 +87,79 @@ body {
   width:100%;
   max-width:200px;
   height:auto;
-  border:
+  border:2px solid #f5c542;
+  transition: transform 0.3s;
+}
+
+.thumb-item img:hover {
+  transform: scale(1.05);
+}
+
+.thumb-item span {
+  display:block; /* 强制换行到图片下方 */
+  margin-top:10px;
+  font-size:18px;
+  color:#f5c542;
+  text-align:center;
+}
+
+/* 页尾 */
+footer {
+  text-align:center;
+  margin:50px 0;
+  font-size:14px;
+  color:#888;
+}
+</style>
+</head>
+<body>
+
+<!-- 第一行：首页大标题 -->
+<div class="site-title">
+  <a href="../index.html">RENCLINKCREAKY</a>
+</div>
+
+<!-- 第二行：四个子页面导航 -->
+<div class="main-nav">
+  <a href="../comic/chapter1.html">Comic</a>
+  <a href="index.html">Archive</a>
+  <a href="../gallery/index.html">Gallery</a>
+  <a href="../characters/index.html">Characters</a>
+</div>
+
+<!-- 第三行：Archive 居中标题 -->
+<h2 class="archive-title">Archive</h2>
+
+<!-- 第四行：Volume 1 左对齐 -->
+<h2 class="volume-title">Volume 1</h2>
+
+<!-- 第五行：缩略图网格 -->
+<div class="thumbs-container">
+  <div class="thumb-item">
+    <a href="../comic/chapter1.html">
+      <img src="../images/ch1_01.png" alt="Renclink Unintentionally" loading="lazy">
+      <span>Renclink Unintentionally</span>
+    </a>
+  </div>
+  <div class="thumb-item">
+    <a href="../comic/chapter2.html">
+      <img src="../images/ch2_01.png" alt="Chapter 2" loading="lazy">
+      <span>Chapter 2</span>
+    </a>
+  </div>
+  <div class="thumb-item">
+    <a href="../comic/chapter3.html">
+      <img src="../images/ch3_01.png" alt="Chapter 3" loading="lazy">
+      <span>Chapter 3</span>
+    </a>
+  </div>
+  <!-- 可以继续添加更多章节 -->
+</div>
+
+<!-- 页尾 -->
+<footer>
+  © 2026 Renclinkcreaky. All rights reserved.
+</footer>
+
+</body>
+</html>
