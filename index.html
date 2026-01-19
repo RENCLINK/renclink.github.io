@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>RENCLINKCREAKY</title>
@@ -21,6 +21,16 @@
       padding:50px 0 20px 0;
       color:#f5c542;
       text-shadow: 2px 2px 5px #222;
+    }
+
+    .site-title a {
+      color:#f5c542;
+      text-decoration:none;
+    }
+
+    .site-title a:hover {
+      color:#fff;
+      text-shadow:1px 1px 5px #f5c542;
     }
 
     /* 主导航 */
@@ -48,14 +58,27 @@
       color:#ccc;
     }
 
+    /* 图片优化：限制宽度 + 自适应，lazy加载 */
     .intro img {
       max-width:100%;
       height:auto;
       margin-top:20px;
       border:2px solid #f5c542;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
     }
 
-    /* 赞助按钮 */
+    /* 懒加载（lazy）示例 */
+    img[loading="lazy"] {
+      filter: blur(1px);
+      transition: filter 0.3s;
+    }
+    img[loading="lazy"]:not([src=""]) {
+      filter: none;
+    }
+
+    /* 支持按钮 */
     .support-btn {
       display:inline-block;
       margin:30px 0;
@@ -85,12 +108,13 @@
 </head>
 <body>
 
-<!-- 首页大标题 -->
-<div class="site-title">RENCLINKCREAKY</div>
+<!-- 首页大标题，点击跳回首页 -->
+<div class="site-title">
+  <a href="index.html">RENCLINKCREAKY</a>
+</div>
 
-<!-- 主导航菜单 -->
+<!-- 主导航菜单（Home 已移除） -->
 <div class="main-nav">
-  <a href="index.html">Home</a>
   <a href="comic/chapter1.html">Comic</a>
   <a href="archive/index.html">Archive</a>
   <a href="gallery/index.html">Gallery</a>
@@ -99,11 +123,12 @@
 
 <!-- 网站简介 / 宣传图 -->
 <div class="intro">
-  <p>欢迎来到我的漫画网站！</p>
-  <p>这里将展示我的原创漫画，每个章节都会第一时间更新。</p>
-  <img src="images/ch1_01.png" alt="宣传图">
-  <p>支持创作：如果你喜欢我的作品，可以点击下面的按钮进行赞助。</p>
-  <a class="support-btn" href="#" target="_blank">Support / 赞助</a>
+  <p>Welcome to my comics website!</p>
+  <p>All original comics will be updated as soon as new chapters are ready.</p>
+  <!-- lazy loading 图片，减轻加载压力 -->
+  <img src="images/ch1_01.png" alt="Cover Image" loading="lazy">
+  <p>Support my work: click the button below if you want to help.</p>
+  <a class="support-btn" href="#" target="_blank">Support / Donate</a>
 </div>
 
 <!-- 页尾 -->
