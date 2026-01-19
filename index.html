@@ -1,121 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RENCLINKCREAKY</title>
-
 <style>
-body {
-  margin:0;
-  padding:0;
-  background:#000;
-  color:#eee;
-  font-family:'Arial', sans-serif;
-  text-align:center;
-}
+body { margin:0; padding:0; background:#000; color:#eee; font-family:'Arial', sans-serif; text-align:center; }
 
-/* ===== 标题 ===== */
-.site-title {
-  font-size:48px;
-  font-weight:bold;
-  padding:40px 0 20px 0;
-  color:#f5c542;
-}
-.site-title a {
-  color:#f5c542;
-  text-decoration:none;
-}
-.site-title a:hover { color:#fff; }
+/* 大标题 */
+.site-title { font-size:60px; font-weight:bold; padding:40px 0 20px 0; color:#f5c542; text-shadow:2px 2px 5px #222; }
+.site-title a { color:#f5c542; text-decoration:none; }
+.site-title a:hover { color:#fff; text-shadow:1px 1px 5px #f5c542; }
 
-/* ===== 导航 ===== */
-.main-nav {
-  margin-bottom:30px;
-}
-.main-nav a {
-  color:#f5c542;
-  text-decoration:none;
-  font-size:22px;
-  margin:0 20px;
-}
+/* 导航 */
+.main-nav { margin-bottom:30px; }
+.main-nav a { color:#f5c542; text-decoration:none; font-size:22px; margin:0 20px; }
 .main-nav a:hover { color:#fff; }
 
-/* ===== 社交图标 ===== */
-.socials {
-  margin:20px 0 30px 0;
-}
-.socials a {
-  display:inline-block;
-  margin:0 12px;
-}
-.socials svg {
-  width:22px;
-  height:22px;
-  fill:#f5c542;
-  opacity:0.8;
-  transition: transform 0.2s, opacity 0.2s;
-}
-.socials a:hover svg {
-  transform: scale(1.15);
-  opacity:1;
-}
+/* 顶部社交 */
+.socials { margin:20px 0 30px 0; }
+.socials a { display:inline-block; margin:0 12px; }
+.socials svg { width:22px; height:22px; fill:#f5c542; opacity:0.8; transition: transform 0.2s, opacity 0.2s; }
+.socials a:hover svg { transform: scale(1.15); opacity:1; }
 
-/* ===== 主视觉 ===== */
-.hero {
-  max-width:1100px;
-  margin:0 auto 70px auto;
-  padding:0 20px;
-}
-.hero img {
-  width:100%;
-  height:auto;
-  border:2px solid #f5c542;
-}
+/* 主视觉 */
+.hero img { width:100%; max-width:1100px; margin:0 auto 70px auto; display:block; padding:0 20px; border:2px solid #f5c542; }
 
-/* ===== Latest Comic ===== */
-.latest-section {
-  margin-bottom:80px;
-}
-.latest-title {
-  font-size:30px;
-  color:#f5c542;
-  margin-bottom:30px;
-}
-.latest-comic a {
-  text-decoration:none;
-  color:#f5c542;
-}
-.latest-comic img {
-  width:260px;
-  border:2px solid #f5c542;
-  transition: transform 0.3s;
-}
-.latest-comic img:hover {
-  transform: scale(1.05);
-}
-.latest-comic span {
-  display:block;
-  margin-top:14px;
-  font-size:18px;
-}
+/* Latest Comic */
+.latest-section { margin-bottom:80px; }
+.latest-title { font-size:30px; color:#f5c542; margin-bottom:30px; }
+.latest-comic a { text-decoration:none; color:#f5c542; }
+.latest-comic img { width:260px; border:2px solid #f5c542; transition: transform 0.3s; }
+.latest-comic img:hover { transform: scale(1.05); }
+.latest-comic span { display:block; margin-top:14px; font-size:18px; }
 
-/* ===== 页尾 ===== */
-footer {
-  margin:40px 0;
-  font-size:14px;
-  color:#888;
-}
+/* 页尾 */
+footer { margin:40px 0; font-size:14px; color:#888; }
 </style>
 </head>
-
 <body>
 
-<!-- 标题 -->
-<div class="site-title">
-  <a href="index.html">RENCLINKCREAKY</a>
-</div>
+<div class="site-title"><a href="index.html">RENCLINKCREAKY</a></div>
 
-<!-- 导航 -->
 <div class="main-nav">
   <a id="comic-nav" href="#">Comic</a>
   <a href="archive/index.html">Archive</a>
@@ -123,72 +49,33 @@ footer {
   <a href="characters/index.html">Characters</a>
 </div>
 
-<!-- 顶部社交 -->
 <div class="socials">
-  <!-- Email -->
-  <a href="mailto:jwh948754@gmail.com" aria-label="Email">
-    <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm10 9L4 6h16l-8 7z"/></svg>
-  </a>
-
-  <!-- Patreon -->
-  <a href="https://www.patreon.com/renclinkcreaky" target="_blank" aria-label="Patreon">
-    <svg viewBox="0 0 24 24"><path d="M14.8 2a8.8 8.8 0 1 1 0 17.6A8.8 8.8 0 0 1 14.8 2zM2 2h3v20H2z"/></svg>
-  </a>
-
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/renclink" target="_blank" aria-label="Instagram">
-    <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10a5 5 0 0 0 0-10z"/></svg>
-  </a>
-
-  <!-- Bluesky -->
-  <a href="https://bsky.app/profile/renclink.bsky.social" target="_blank" aria-label="Bluesky">
-    <svg viewBox="0 0 24 24"><path d="M12 12c2.5-3.5 7-6.5 9-7-1 4-4 8-7 9 3 1 6 5 7 9-2-1-6.5-3.5-9-7-2.5 3.5-7 6.5-9 7 1-4 4-8 7-9-3-1-6-5-7-9 2 1 6.5 3.5 9 7z"/></svg>
-  </a>
-
-  <!-- YouTube -->
-  <a href="https://www.youtube.com/@renclinkcreaky" target="_blank" aria-label="YouTube">
-    <svg viewBox="0 0 24 24"><path d="M23 7s-1-4-4-4H5C2 3 1 7 1 7s-1 4-1 7 1 7 1 7 1 4 4 4h14c3 0 4-4 4-4s1-4 1-7-1-7-1-7zM10 16V8l6 4-6 4z"/></svg>
-  </a>
+  <a href="mailto:jwh948754@gmail.com"><svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm10 9L4 6h16l-8 7z"/></svg></a>
+  <a href="https://www.patreon.com/renclinkcreaky" target="_blank"><svg viewBox="0 0 24 24"><path d="M14.8 2a8.8 8.8 0 1 1 0 17.6A8.8 8.8 0 0 1 14.8 2zM2 2h3v20H2z"/></svg></a>
+  <a href="https://www.instagram.com/renclink" target="_blank"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10a5 5 0 0 0 0-10z"/></svg></a>
+  <a href="https://bsky.app/profile/renclink.bsky.social" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 12c2.5-3.5 7-6.5 9-7-1 4-4 8-7 9 3 1 6 5 7 9-2-1-6.5-3.5-9-7-2.5 3.5-7 6.5-9 7 1-4 4-8 7-9-3-1-6-5-7-9 2 1 6.5 3.5 9 7z"/></svg></a>
+  <a href="https://www.youtube.com/@renclinkcreaky" target="_blank"><svg viewBox="0 0 24 24"><path d="M23 7s-1-4-4-4H5C2 3 1 7 1 7s-1 4-1 7 1 7 1 7 1 4 4 4h14c3 0 4-4 4-4s1-4 1-7-1-7-1-7zM10 16V8l6 4-6 4z"/></svg></a>
 </div>
 
-<!-- 主视觉 -->
 <div class="hero">
   <img src="images/hero.png" alt="Renclinkcreaky Hero Image">
 </div>
 
-<!-- Latest Comic -->
 <section class="latest-section">
   <div class="latest-title">Latest Comic</div>
-
   <div class="latest-comic">
-    <a id="latest-link">
-      <img id="latest-thumb" alt="Latest Comic">
-      <span id="latest-text"></span>
-    </a>
+    <a id="latest-link"><img id="latest-thumb" alt="Latest Comic"><span id="latest-text"></span></a>
   </div>
 </section>
-  
-<footer>
-  © 2026 Renclinkcreaky. All rights reserved.
-</footer>
 
-<!-- ===== Latest Comic 自动控制 ===== -->
+<footer>© 2026 Renclinkcreaky. All rights reserved.</footer>
+
 <script>
-const latestComic = {
-  title: "Chapter 2",
-  link: "comic/chapter2.html",
-  cover: "images/ch2_01.png"
-};
-
-// 更新 Latest Comic 区域
-const latestLink = document.getElementById("latest-link");
-if(latestLink){
-  latestLink.href = latestComic.link;
-  document.getElementById("latest-thumb").src = latestComic.cover;
-  document.getElementById("latest-text").textContent = latestComic.title;
-}
-
-// 更新顶部 Comic 链接
+// 最新章节配置
+const latestComic = { title:"Chapter 2", link:"comic/chapter2.html", cover:"images/ch2_01.png" };
+document.getElementById("latest-link").href = latestComic.link;
+document.getElementById("latest-thumb").src = latestComic.cover;
+document.getElementById("latest-text").textContent = latestComic.title;
 document.getElementById("comic-nav").href = latestComic.link;
 </script>
 
